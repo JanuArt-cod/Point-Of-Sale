@@ -1,0 +1,207 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+
+/* Import Bootstrap */
+@import 'bootstrap/scss/bootstrap';
+
+/* Background abu-abu sangat muda seperti di gambar */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* --- ANIMASI MUNCUL (FADE IN UP) --- */
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+@keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Delay animasi agar munculnya bergantian */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
+/* --- EFEK KARTU MELAYANG (INTERAKTIF) --- */
+.animated-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+.animated-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.08);
+    border-color: #0d6efd;
+}
+
+/* --- STYLING TOP NAVBAR --- */
+.header-top {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+.main-navbar {
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+.nav-link {
+    color: #6c757d;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 1rem 1.5rem !important;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+/* Efek garis bawah biru dan background berubah saat hover/aktif */
+.nav-link:hover, .nav-link.active {
+    color: #0d6efd;
+    background-color: rgba(13, 110, 253, 0.05);
+    border-bottom: 3px solid #0d6efd;
+}
+/* --- iOS THEME UNTUK HALAMAN LOGIN --- */
+
+/* Latar belakang gradasi cerah ala iOS agar efek kaca terlihat jelas */
+.ios-bg {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 25%, #a1c4fd 75%, #c2e9fb 100%);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Kartu Login: Warna putihnya ditipiskan (0.4) agar lebih tembus pandang */
+.ios-card {
+    background: rgba(255, 255, 255, 0.4); /* Transparansi ditingkatkan */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Input form tanpa border, warna abu-abu khas iOS */
+.ios-input {
+    background-color: #f2f2f7 !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 14px 16px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Efek saat input sedang diketik */
+.ios-input:focus {
+    background-color: #ffffff !important;
+    box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.15) !important;
+}
+
+/* Tombol Login biru khas Apple */
+.ios-btn {
+    background-color: #007aff;
+    color: #ffffff;
+    border-radius: 14px;
+    padding: 14px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: none;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.ios-btn:hover {
+    opacity: 0.9;
+    background-color: #0065d0;
+    color: #fff;
+    transform: scale(0.98); /* Efek tombol ditekan */
+}
+/* Mengecilkan ukuran dasar aplikasi agar tidak terlalu raksasa di layar 100% */
+html, body {
+    font-size: 14px !important; 
+}
+
+/* Efek kaca khusus untuk Header atas */
+.glass-header {
+    background: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Efek kaca untuk Navbar menu */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 0 0 20px 20px; /* Sudut membulat di bagian bawah saja */
+}
+
+/* Kartu Dashboard dengan efek kaca & animasi hover digabung */
+.glass-animated-card {
+    background: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.glass-animated-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 122, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.9);
+}
+/* Efek Kaca untuk Kotak Dropdown Menu */
+.glass-dropdown {
+    background: rgba(255, 255, 255, 0.65) !important; /* Sedikit lebih tebal agar teks tetap terbaca */
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 16px !important;
+    padding: 0.5rem !important; /* Memberi ruang di dalam kotak */
+}
+
+/* Efek saat menu di dalam dropdown disorot (hover) */
+.glass-dropdown .dropdown-item {
+    transition: all 0.2s;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.glass-dropdown .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: translateX(3px); /* Efek bergeser sedikit ke kanan */
+    color: #0d6efd;
+}
+/* --- Efek Kaca Khusus untuk Tabel --- */
+.glass-table {
+    --bs-table-bg: transparent !important;
+    margin-bottom: 0;
+}
+
+.glass-table th, 
+.glass-table td, 
+.glass-table tr {
+    background-color: transparent !important; /* Paksa hilangkan warna solid Bootstrap */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important; /* Garis pemisah tembus pandang */
+    color: #333 !important; /* Pastikan teks tetap gelap dan terbaca */
+}
+
+/* Efek sorot (hover) yang lebih lembut dan transparan */
+.glass-table tbody tr:hover th,
+.glass-table tbody tr:hover td {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    transition: background-color 0.2s ease;
+}
